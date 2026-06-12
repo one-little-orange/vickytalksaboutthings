@@ -1,32 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whats On!</title>
-    <style>
-        body {
-            background-color: #f88335; /* Change this color to any you like */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Arial', sans-serif; /* Use Arial as the sans-serif font */
-            color: #fff8e3; /* Text color */
-        }
-        h1, p {
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upcoming Talks</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --cream:#fff8ee;
+    --orange:#f88335;
+    --green:#2f6f4f;
+    --dark:#1d2a26;
+    --card:#ffffff;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:40px 20px;
+    background:var(--cream);
+    color:var(--dark);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+}
+
+h1{
+    font-size:clamp(2.2rem,5vw,4rem);
+    font-weight:800;
+    margin-bottom:0.3em;
+    line-height:1;
+}
+
+.subtitle{
+    font-size:1.1rem;
+    color:#5c665f;
+    margin-bottom:2.5rem;
+}
+
+.accent{
+    color:var(--orange);
+}
+
+.talk{
+    background:var(--card);
+    border-left:6px solid var(--orange);
+    border-radius:20px;
+    padding:24px;
+    margin-bottom:20px;
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.06);
+}
+
+.talk h2{
+    margin:0 0 8px 0;
+    font-size:1.3rem;
+}
+
+.meta{
+    color:#5c665f;
+    font-size:0.95rem;
+    margin-bottom:14px;
+}
+
+.join-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:var(--green);
+    color:white;
+    padding:12px 18px;
+    border-radius:999px;
+    font-weight:600;
+    transition:0.2s ease;
+}
+
+.join-btn:hover{
+    transform:translateY(-2px);
+}
+
+.badge{
+    display:inline-block;
+    background:#ffe3d1;
+    color:#c85f18;
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:0.8rem;
+    font-weight:700;
+    margin-bottom:12px;
+}
+</style>
 </head>
 <body>
-    <div>
-        <h1>Talks I'm giving soon!</h1>
-        <p>Heres a list of my practice talks I will be giving in the foreseable future: </p>
-        <p>Friday 19th July @ 16:00 CEST (15:00 BST). Cave animals of the mediteranean: https://meet.google.com/tkg-nhjq-niu </p>
-        <p>Wednesday 24th July @ 10:15 CEST (09:15 BST). My research project - do tropical reef fish kill off foreigners of the same species?: https://meet.google.com/tkg-nhjq-niu </p>
+
+<div class="container">
+
+    <h1>Upcoming <span class="accent">Talks</span></h1>
+
+    <p class="subtitle">
+        Practice talks, research updates, and natural history discussions.
+    </p>
+
+    <div class="talk">
+
+        <div class="badge">Natural History</div>
+
+        <h2>Cave Animals of the Mediterranean</h2>
+
+        <div class="meta">
+            Friday 19 July · 16:00 CEST · 15:00 BST
+        </div>
+
+        <a class="join-btn"
+           href="https://meet.google.com/tkg-nhjq-niu">
+            Join Talk →
+        </a>
+
     </div>
+
+    <div class="talk">
+
+        <div class="badge">Research</div>
+
+        <h2>
+            Do Tropical Reef Fish Kill Foreigners of the Same Species?
+        </h2>
+
+        <div class="meta">
+            Wednesday 24 July · 10:15 CEST · 09:15 BST
+        </div>
+
+        <a class="join-btn"
+           href="https://meet.google.com/tkg-nhjq-niu">
+            Join Talk →
+        </a>
+
+    </div>
+
+</div>
+
 </body>
 </html>
